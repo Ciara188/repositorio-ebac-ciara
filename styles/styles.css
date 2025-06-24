@@ -1,0 +1,43 @@
+* {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+main article.sug {
+  box-shadow: 0px 0px 10px #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ff96e8;
+}
+
+footer {
+  width: 100%;
+  padding: 10px 50px;
+  background-color: #ffdff6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 20px;
+}
+footer article svg {
+  width: 50px;
+}
+footer article nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+footer article nav a {
+  text-decoration: none;
+  color: #ae0088;
+}
+footer article > a {
+  display: block;
+  color: #ae0088;
+}
+
+.carousel {
+  width: 600px;
+  margin: 0 auto;
+}/*# sourceMappingURL=styles.css.map */

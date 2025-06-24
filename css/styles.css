@@ -1,0 +1,401 @@
+body{
+    width: 100%;
+    font-size: 15px;
+    font-weight: 300;
+    color: #000000;
+    margin: 0;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    padding: 15px 30px;
+    background-color: #ffdff6;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.header__logo { /*Elemento */
+    width: 120px;
+}
+
+.header__menu{
+    display: flex;
+    gap: 50px;
+}
+
+.header__nav{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__link{
+    font-size: .9rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: #000000;
+}
+
+.header__user{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.header__icon{
+    cursor: pointer;
+}
+
+.header__icon--secondary{ /*Este es el modificador */
+    opacity: .4;
+}
+
+.banner {
+    width: 100%;
+    padding: 60px 0;
+    text-align: center;
+    background-image: url("../img/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    background-position-y: 40%;
+}
+
+.banner h2{
+    width: 100%;
+    font-weight: 600;
+    font-size: 30px;
+    margin: 10px;
+}
+
+.banner p{
+    width: 100%;
+    margin: 0 auto;
+    font-size: 25px;
+    opacity: 0.9;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #bb40b3;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    margin: 30px auto 0;
+    gap: 30px 20px;
+}
+
+.products__item{
+
+}
+
+.products__img{
+    width: 100%;
+}
+
+.products__tittle,
+.products__cost{
+    font-size: .75rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.products__btn{
+    display: block;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 20px;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.products__btn--disable{
+    background-color: rgb(209, 209, 209);
+}
+
+.comments {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    margin: 30px auto 0;
+    gap: 30px 20px;
+}
+
+.comments__coment,
+.comments__important,
+.comments__video {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+input [type="text"]{
+    background-color: #000000;
+}
+
+a:visited {
+    color: rgb(0, 174, 193);
+    font-size: 1rem;
+  }
+
+a:active {
+    color: rgb(255, 0, 238);
+    font-size: 1rem;
+}
+
+#para1 {
+    text-align: left;
+    color: rgb(255, 0, 0);
+  }
+
+article > p:first-child{
+    font-size: 30px;
+}
+
+article > p:nth-child(5){
+    font-size: 20px;
+}
+
+article > p:last-child{
+    font-size: 30px;
+}
+
+.cart{
+    width: 500px;
+    background-color: #fff;
+    padding: 25px;
+    box-sizing: border-box;
+    height: 100%;
+    position: fixed;
+    right: -100%;
+    top: 100%;
+    box-shadow: -19px -1px 22px -15px rgb(0, 0, 0, 0.30);
+}
+
+.cart h2{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 25px 0;
+    box-sizing: border-box;
+}
+
+.cart div {
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.cart img {
+    width: 60px;
+    align-items: center;
+}
+
+.cart div p:nth-child(3){
+    font-weight: 500;
+}
+
+.cart div i {
+    width: 25px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.cart .delete-icon{
+    width: 50%;
+}
+
+
+
+.grid-container{
+    display: grid;
+    width: 100%;
+    margin: 0 auto 0 220px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    'header header'
+    'main main'
+    'footer footer';
+}
+
+.grid-container header {
+    grid-area: header;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.grid-container main {
+    width: 100%;
+    display: flex;
+    grid-area: main;
+    text-align: center;
+}
+
+.grid-container main img {
+    width: 100%; /* O ajusta a un valor específico como 300px */
+    max-width: 500px; /* Establece un límite máximo si es necesario */
+    height: auto; /* Mantiene la proporción */
+}
+
+
+.grid-container footer {
+    grid-area: footer;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.grid-item item-1{
+    grid-column: 1;
+    grid-row: 1/3;
+    width: 100%;
+}
+.grid-item item-2{
+    grid-column: 2;
+    grid-row: 2/3;
+    width: 100%;
+}
+.grid-item item-3{
+    grid-column: 3;
+    grid-row: 3/3;
+    width: 100%;
+}
+
+@media (max-width: 820px) {
+    header{
+        padding: 15px;
+    }
+
+    header > img{
+        width: 60px;
+    }
+
+    header i {
+        width: 35px;
+    }
+
+    .products {
+        grid-template-columns: repeat(ato-fit, minmax(200px, 1fr));
+    }
+
+    .products img{
+        width: 150px;
+    }
+
+    .cart{
+        width: 400px;
+        top: 80px;
+    }
+
+    .grid-container {
+
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .banner{
+        padding: 30px 0;
+    }
+
+    .banner h2{
+        font-size: 18px;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    .products__item{
+
+    }
+
+    .products img{
+        width: 100px;
+        max-width: 200px;
+        margin-bottom: 10px;
+    }
+
+    .product h3,
+    .product p{
+        padding: 0 10px;
+    }
+
+    .cart {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .cart h2 {
+        padding: 15px 0;
+    }
+
+    .cart div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart img {
+        width: 100px;
+    }
+
+    .cart p {
+        margin: 0;
+    }
+
+    .grid-container {
+
+    }
+    
+}
+
+@media (hover:hover){
+    button:hover {
+        background-color: #fff;
+        color: #ae0088;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: #fff;
+    }
+
+    footer{
+        background-color: #333;
+        color: #ae0088;
+    }
+
+    .grid-container header,
+    .grid-container main,
+    .grid-container footer{
+        background-color: #333;
+        color: #fff;
+    }
+}

@@ -1,0 +1,64 @@
+$footerTcolor: #ae0088;
+$fontFamily: "Montserrat", Arial, Helvetica, sans-serif;
+
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin shadowConteiner ($blur, $shadowColor, $bgColor){
+    box-shadow: 0px 0px $blur $shadowColor;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: $bgColor;
+}
+
+* {
+    font-family: $fontFamily;
+}
+
+main {
+    article {
+        &.sug{
+            @include shadowConteiner(10px, #ffffff, #ff96e8)
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    padding: 10px 50px;
+    background-color: #ffdff6;
+    @include flexbox;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 20px;
+
+    article {
+        svg {
+            width: 50px;
+        }
+
+        nav {
+            @include flexbox;
+            flex-direction: row;
+            gap: 10px;
+
+            a {
+                text-decoration: none;
+                color: $footerTcolor;
+            }
+        }
+
+        > a {
+            display: block;
+            color: $footerTcolor;
+        }
+    }
+}
+
+.carousel{
+    width: 600px;
+    margin: 0 auto;
+    
+}
