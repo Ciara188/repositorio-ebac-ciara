@@ -49,7 +49,7 @@ body{
     cursor: pointer;
 }
 
-.header__icon--secondary{ /*Este es el modificador */
+.header__icon--secondary{ 
     opacity: .4;
 }
 
@@ -178,15 +178,18 @@ article > p:last-child{
 }
 
 .cart{
-    width: 500px;
+    width: 400px;
     background-color: #fff;
     padding: 25px;
     box-sizing: border-box;
     height: 100%;
     position: fixed;
-    right: -100%;
-    top: 100%;
+    right: -50%;
+    top: 18%;
     box-shadow: -19px -1px 22px -15px rgb(0, 0, 0, 0.30);
+    &.show {
+        right: 0%;
+    }
 }
 
 .cart h2{
@@ -254,9 +257,9 @@ article > p:last-child{
 }
 
 .grid-container main img {
-    width: 100%; /* O ajusta a un valor específico como 300px */
-    max-width: 500px; /* Establece un límite máximo si es necesario */
-    height: auto; /* Mantiene la proporción */
+    width: 100%; 
+    max-width: 500px; 
+    height: auto; 
 }
 
 
@@ -378,7 +381,51 @@ article > p:last-child{
     button:hover {
         background-color: #fff;
         color: #ae0088;
+        &.toggle{
+            background-color: #ff061b;
+        }
     }
+}
+
+.menu {
+    text-decoration: none;
+    color: black;
+    width: 300px;
+    background-color: #fff;
+    padding: 25px;
+    box-sizing: border-box;
+    height: 100%;
+    position: fixed;
+    left: -50%;
+    top: 18%;
+    box-shadow: -19px -1px 22px -15px rgb(0, 0, 0, 0.30);
+    &.show {
+        left: 0%;
+    } 
+}
+
+.menu a{  
+  display: block;  
+  margin: 0.5rem 0; 
+}
+
+.menu h2 {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;             
+  margin: 0 0 20px 0;              
+  font-size: 1.5rem;
+}
+
+.menu h2 .closeMenu {
+  width: 24px;   
+  height: 24px;
+  cursor: pointer;
+}
+
+
+.menu.hide {
+  left: -50%; 
 }
 
 @media (prefers-color-scheme: dark) {
